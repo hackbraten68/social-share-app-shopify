@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "social-share-app"
+client_id = "74cc2afb71188571ac48c8aa50853cc4"
+application_url = "https://reid-actress-cat-ny.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://reid-actress-cat-ny.trycloudflare.com/auth/callback",
+  "https://reid-actress-cat-ny.trycloudflare.com/auth/shopify/callback",
+  "https://reid-actress-cat-ny.trycloudflare.com/api/auth/callback",
+  "https://reid-actress-cat-ny.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "sandbox-plus-sdi-y1-development.myshopify.com"

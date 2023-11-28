@@ -1,0 +1,26 @@
+.share-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.share-btn-container a {
+  margin: 0 1rem;
+  width: 30px;
+  height: 30px;
+  transition: 500ms;
+}
+.share-btn-container a:hover {
+  transform: scale(1.2);
+}
+
+.facebook-btn .icon-facebook {
+  color: #1877f2;
+}
+
+.twitter-btn .icon-twitter {
+  color: #1da1f2;
+}
+
+.pinterest-btn .icon-pinterest {
+  color: #e60023;
+}

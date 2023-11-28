@@ -1,0 +1,53 @@
+{{ 'app-social-share.css' | asset_url | stylesheet_tag }}
+
+<div class="share-btn-container">
+  <a href="#" class="facebook-btn">
+    {% render 'icon-facebook' %}
+  </a>
+  <a href="#" class="twitter-btn">
+    {% render 'icon-twitter' %}
+  </a>
+  <a href="#" class="pinterest-btn">
+    {% render 'icon-pinterest' %}
+  </a>
+</div>
+<script>
+  const facebookBtn = document.querySelector(".facebook-btn");
+  const twitterBtn = document.querySelector(".twitter-btn");
+  const pinterestBtn = document.querySelector(".pinterest-btn");
+
+  function init() {
+    console.log("Hello World! This is a test message :P ");
+    const pinterestImgQuery = document.querySelector(".product__media");
+    const pinterestImg = pinterestImgQuery.querySelector('img');
+
+    let postUrl = encodeURI(document.location.href);
+    let postTitle = encodeURI(document.title);
+    let postImg = encodeURI(pinterestImg.src);
+    console.log(postImg)
+    facebookBtn.setAttribute(
+      "href",
+      `https://www.facebook.com/sharer.php?u=${postUrl}`
+    );
+
+    twitterBtn.setAttribute(
+      "href",
+      `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+    );
+
+    pinterestBtn.setAttribute(
+      "href",
+      `https://pinterest.com/pin/create/button/?url=${postUrl}&media=${postImg}`
+    );
+  }
+
+  init();
+
+</script>
+
+{% schema %}
+{
+  "name": "Social Shares",
+  "target": "section"
+}
+{% endschema %}
