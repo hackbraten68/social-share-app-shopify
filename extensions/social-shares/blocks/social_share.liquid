@@ -1,4 +1,30 @@
 {{ 'app-social-share.css' | asset_url | stylesheet_tag }}
+{% if block.settings.color == 'colored' %}
+  {% style %}
+    .facebook-btn .icon-facebook { color: #1877f2; }
+    .twitter-btn .icon-twitter { color: #1da1f2; }
+    .pinterest-btn .icon-pinterest { color: #e60023; }
+  {% endstyle %}
+{% else %}
+  {% style %}
+    .facebook-btn, .icon-facebook, .twitter-btn, .icon-twitter, .pinterest-btn, .icon-pinterest { color: #8F8F8F }
+  {% endstyle %}
+{% endif %}
+
+
+{% if block.settings.alignment == 'left' %}
+  {% style %}
+    .share-btn-container { justify-content: flex-start; }
+  {% endstyle %}
+{% elsif block.settings.alignment == 'right' %}
+  {% style %}
+    .share-btn-container { justify-content: flex-end; }
+  {% endstyle %}
+{% else %}
+  {% style %}
+    .share-btn-container { justify-content: center; }
+  {% endstyle %}
+{% endif %}
 
 <div class="share-btn-container">
   <a href="#" class="facebook-btn">
@@ -48,6 +74,46 @@
 {% schema %}
 {
   "name": "Social Shares",
-  "target": "section"
+  "target": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color",
+      "options": [
+        {
+          "value": "colored",
+          "label": "brand colors"
+        },
+        {
+          "value": "greyed",
+          "label": "grey icons"
+        }
+      ],
+      "default": "colored",
+      "label": "Color Scheme for Social Buttons",
+      "info": "t:sections.image-banner.settings.image_height.info"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "center",
+          "label": "center"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ],
+      "default": "center",
+      "label": "Alignment",
+      "info": "Alignment of Share Buttons"
+    }
+  ]
 }
 {% endschema %}
