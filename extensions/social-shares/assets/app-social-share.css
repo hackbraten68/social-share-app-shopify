@@ -1,6 +1,5 @@
 .share-btn-container {
   display: flex;
-  justify-content: center;
 }
 
 .share-btn-container a {
@@ -11,16 +10,4 @@
 }
 .share-btn-container a:hover {
   transform: scale(1.2);
-}
-
-.facebook-btn .icon-facebook {
-  color: #1877f2;
-}
-
-.twitter-btn .icon-twitter {
-  color: #1da1f2;
-}
-
-.pinterest-btn .icon-pinterest {
-  color: #e60023;
 }

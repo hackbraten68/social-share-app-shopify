@@ -2,7 +2,7 @@
 
 name = "social-share-app"
 client_id = "74cc2afb71188571ac48c8aa50853cc4"
-application_url = "https://reid-actress-cat-ny.trycloudflare.com"
+application_url = "https://collins-sue-bookmark-ralph.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://reid-actress-cat-ny.trycloudflare.com/auth/callback",
-  "https://reid-actress-cat-ny.trycloudflare.com/auth/shopify/callback",
-  "https://reid-actress-cat-ny.trycloudflare.com/api/auth/callback",
-  "https://reid-actress-cat-ny.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://collins-sue-bookmark-ralph.trycloudflare.com/auth/callback",
+  "https://collins-sue-bookmark-ralph.trycloudflare.com/auth/shopify/callback",
+  "https://collins-sue-bookmark-ralph.trycloudflare.com/api/auth/callback",
+  "https://collins-sue-bookmark-ralph.trycloudflare.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]
